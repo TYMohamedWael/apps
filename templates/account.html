@@ -1,0 +1,180 @@
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+    <title>Account Settings</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header text-center">
+                        <h2>Account Settings</h2>
+                    </div>
+                    <div class="card-body">
+                        <form method="POST">
+                            <div class="form-group">
+                                <label for="username">Username</label>
+                                <input type="text" id="username" name="username" class="form-control"
+                                    placeholder="Update your username" value="{{ user.username }}">
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" id="password" name="password" class="form-control"
+                                    placeholder="Update your password">
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Update Account</button>
+                            <a href="{{ url_for('index') }}" class="btn btn-secondary btn-block mt-2">Cancel</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html> -->
+
+
+
+
+
+<!-- 
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Application Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5+5hb7Mr0PoGhNS2TZx5Vl6IEs30kJ5yIpabDVT1" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+    
+        .container {
+            margin-top: 50px;
+        }
+    
+        .card {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    
+        .btn-primary,
+        .btn-success,
+        .btn-danger {
+            transition: all 0.2s ease-in-out;
+        }
+    
+        .btn-primary:hover,
+        .btn-success:hover,
+        .btn-danger:hover {
+            transform: translateY(-2px);
+        }
+    
+        .modal-header {
+            background-color: #007bff;
+            color: #fff;
+        }
+    </style>
+    <title>Account Settings</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header text-center">
+                        <h2>Account Settings</h2>
+                    </div>
+                    <div class="card-body">
+                        <form method="POST">
+                            <div class="form-group">
+                                <label for="username">Username</label>
+                                <input type="text" id="username" name="username" class="form-control"
+                                    placeholder="Update your username" value="{{ user.username }}">
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" id="password" name="password" class="form-control"
+                                    placeholder="Update your password">
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Update Account</button>
+                            <a href="{{ url_for('index') }}" class="btn btn-secondary btn-block mt-2">Back to Notes</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-7qdZ9goE+Rh1v7OFphffGkr7+6zvjDKxxszqbyz7z05iwmMxRzef4Pf20m6L9H3r"
+            crossorigin="anonymous"></script>
+
+</body>
+
+</html> -->
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Settings</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-header text-center">
+                <h2>Account Settings</h2>
+            </div>
+            <div class="card-body">
+                <form method="POST"  action="{{ url_for('account') }}" >
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" class="form-control"
+                            value="{{ user.username }}">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" class="form-control" value="{{ user.email }}">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">New Password (optional)</label>
+                        <input type="password" id="password" name="password" class="form-control"
+                            placeholder="Enter new password if you want to change it">
+                    </div>
+                    <button type="submit" class="btn btn-success btn-block">Update Account</button>
+                </form>
+                <a href="{{ url_for('index') }}" class="btn btn-primary mt-3">Back to Notes</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
